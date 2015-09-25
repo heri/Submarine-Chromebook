@@ -1,8 +1,9 @@
 require 'package'
 
 class Ruby < Package
-  version '2.0.0p247-chromeos1'
+  version '2.0.0-p598-chromeos-arm'
   binary_url ({
+    armv7l: 'https://raw.github.com/heri/chromebrew-arm/ruby-2.0.0-p598-chromeos-arm.tar.gz',
     i686: "https://dl.dropboxusercontent.com/s/tufbuqcn80ubypx/ruby-2.0.0p247-chromeos-i686.tar.gz?token_hash=AAGu_5wuqZe2eDOkfL5oh4esQ8HAZJIvbMG7GplnQrSa3g&dl=1",
     x86_64: "https://www.dropbox.com/s/x3jt0z5i1r4afyv/ruby-2.0.0p247-chromeos-x86_64.tar.gz?dl=1"
   })

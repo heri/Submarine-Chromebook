@@ -13,10 +13,10 @@ CREW_PACKAGES_PATH=$CREW_LIB_PATH/packages
 user=$(whoami)
 architecture=$(uname -m)
 
-if [ $architecture != "i686" ] && [ $architecture != "x86_64" ]; then
-  echo 'Your device is not supported by Chromebrew yet.'
-  exit 1;
-fi
+# if [ $architecture != "i686" ] && [ $architecture != "x86_64" ]; then
+#   echo 'Your device is not supported by Chromebrew yet.'
+#   exit 1;
+# fi
 
 #prepare directories
 sudo mkdir -p $CREW_LIB_PATH && sudo chown -R $USER:$USER $CREW_LIB_PATH
@@ -33,6 +33,10 @@ cd $CREW_BREW_DIR
 echo "Downloading ruby..."
 
 case "$architecture" in
+"armv7l")
+  link='https://raw.github.com/heri/chromebrew-arm/ruby-2.0.0-p598-chromeos-arm.tar.gz'
+  tarname='ruby-2.0.0-p598-chromeos-arm.tar.gz'
+  ;;
 "i686")
   link='https://dl.dropboxusercontent.com/s/tufbuqcn80ubypx/ruby-2.0.0p247-chromeos-i686.tar.gz?token_hash=AAGu_5wuqZe2eDOkfL5oh4esQ8HAZJIvbMG7GplnQrSa3g&dl=1'
   tarname='ruby-2.0.0p247-chromeos-'$architecture'.tar.gz'
@@ -70,7 +74,7 @@ echo '  "architecture": "'$architecture'",' >> device.json
 echo '  "installed_packages": [' >> device.json
 echo '    {' >> device.json
 echo '      "name": "ruby",' >> device.json
-echo '      "version": "2.0.0p247"' >> device.json
+echo '      "version": "2.0.0-p598"' >> device.json
 echo '    }' >> device.json
 echo '  ]' >> device.json
 echo "}" >> device.json
