@@ -34,7 +34,7 @@ echo "Downloading ruby..."
 
 case "$architecture" in
 "armv7l")
-  link='https://raw.github.com/heri/chromebrew-arm/ruby-2.0.0-p598-chromeos-arm.tar.gz'
+  link='https://raw.githubusercontent.com/heri/chromebrew-arm/master/ruby-2.0.0-p598-chromeos-arm.tar.gz'
   tarname='ruby-2.0.0-p598-chromeos-arm.tar.gz'
   ;;
 "i686")

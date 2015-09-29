@@ -3,7 +3,7 @@ require 'package'
 class Linuxheaders < Package
   version '3.8.11'
   binary_url ({
-    armv7l: 'https://raw.github.com/heri/chromebrew-arm/linuxheaders-3.8.11-chromeos-armv7l.tar.gz',
+    armv7l: 'https://raw.githubusercontent.com/heri/chromebrew-arm/master/linuxheaders-3.8.11-chromeos-armv7l.tar.gz',
     i686: "https://dl.dropboxusercontent.com/s/mdzdoyq7dtnz682/linux-headers-3.4.0-chromeos-i686.tar.gz?token_hash=AAE4yw5oH_SfZ3lAx02mFP603rnjmoB9Gp4vqTY14NsA-A&dl=1",
     x86_64: "https://dl.dropboxusercontent.com/s/3ec3fjpls0t2iqn/linuxheaders-3.8.11-chromeos-x86_64.tar.gz?token_hash=AAFl1_1I3FtwGdoGvGJuGrGUqzaDkhumPzsGJMX5pYhZyQ&dl=1"
   })
